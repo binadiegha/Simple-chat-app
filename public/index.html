@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat application</title>
+  <style>
+
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      background-color: rgb(244, 254, 255);
+    }
+    .main {
+
+      width: 500px;
+      max-width: 98%;
+      border: 1px solid rgb(156, 156, 156);
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .username, .message {
+      width: 100%;
+      height: 46px;
+      padding-inline: 10px;
+      font-size: 16px;
+    }
+
+    .username {
+      border: none;
+    }
+
+    .send {
+      height: 46px;
+      color: white;
+      background-color: rgb(0, 140, 255);
+      border-radius: 10px;
+      border: none;
+      padding-inline: 30px;
+    }
+
+    .chat {
+      min-height: 0px;
+      border: .5px solid grey;
+      padding: 10px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      max-height: 500px;
+      overflow: scroll;
+
+    }
+
+    .my-text-area {
+      display: flex;
+      gap: 10px;
+    }
+
+    button{
+      cursor: pointer;
+    }
+    .chat-bubble{
+      color: white;
+      background-color: rgb(0, 140, 255);
+      padding: 8px 14px;
+      border-radius: 20px 20px 0px 20px;
+      margin-block: 5px;
+      width: max-content;
+      max-width: 80%;
+    }
+
+    .chat-bubble span {
+      font-size: 10px;
+      opacity: .8;
+    }
+
+    .chat-bubble p {
+      max-width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .them{
+      background-color: rgb(0, 188, 119) !important;
+      align-self: start !important;
+      border-radius: 20px 20px 20px 0px !important;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>Chat app</h1>
+
+  <div class="main">
+  
+      <input id="username" class="username" placeholder="username">
+
+
+      <section id="chat" class="chat">
+      </section>
+      <div class="my-text-area">
+        <input id="message" class="message" placeholder="message..."/>
+        <button id="send" class="send">Send</button>
+      </div>
+
+  </div>
+  
+  <script src="https://cdn.socket.io/4.6.0/socket.io.min.js" integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+" crossorigin="anonymous"></script>
+  <script src="chat.js"></script>
+</body>
+</html>

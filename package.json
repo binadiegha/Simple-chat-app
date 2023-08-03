@@ -1,0 +1,13 @@
+{
+  "name": "web_rtc",
+  "version": "1.0.0",
+  "description": "my first web rtc application",
+  "main": "index.js",
+  "author": "jones binadeigha gabriel",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1",
+    "socket.io": "^4.7.1"
+  }
+}
