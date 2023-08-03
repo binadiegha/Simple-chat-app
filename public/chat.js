@@ -63,6 +63,8 @@ socket.on('typing', (data) => {
   
   if(data.message.length >= 1){
     if( document.getElementById('typing-bubble') ) return;
+    user = username()
+    if ( user === data.username) return;
     setNode(data)
   }
   
